@@ -130,3 +130,20 @@ footer {
 .text-center {
   text-align: center;
 }
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin: auto;
+}
+tbody {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+th {
+  border: 2px solid black;
+  background-color: green;
+}
+td {
+  border: 2px solid black;
+  background-color: white;
+}
