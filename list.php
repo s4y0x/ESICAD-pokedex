@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once("head.php");
 ?>
 
@@ -23,11 +23,10 @@ require_once("head.php");
             echo'<tr>
             <td>' . $row['nomPokemon'] . '</td>
             <td>' . $row['idPokemon'] . '</td>
-            <td> <img src="' . $row['urlPhoto'] . '"alt="Pokeimage">', '</td>
+            <td>
+            <a href="details.php?id=' . $row['idPokemon'] . '"><img src="' . $row['urlPhoto'] . '" alt="Pokeimage"></a></td>
             <td>' . $row['type1']  . '<br>' . $row['type2'] . '</td>
             </tr>';
-
-
         }
         ?>
 
