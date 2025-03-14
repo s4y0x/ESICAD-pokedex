@@ -6,6 +6,5 @@ Ce projet est le TP2 de développement Web du BTS SIO 1ere année de l'ESICAD av
 - Recherche de pokemon via la barre de recherche en haut a droite
 - Page de connexion et d'inscription
 - Lorsqu'un utilisateur est connecté il peux se deconnecter en cliquant sur deconnexion, cela redirige automatiquement vers la page de connexion
-- 
 
 
