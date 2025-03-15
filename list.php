@@ -21,12 +21,12 @@ require_once("head.php");
         $result = $databaseConnection->query("SELECT *, t1.nomType AS type1, t2.nomType AS type2 FROM pokemon LEFT JOIN type_pokemon AS t1 ON pokemon.idType1 = t1.idtype LEFT JOIN type_pokemon AS t2 ON pokemon.idType2 = t2.idtype ORDER BY pokemon.idPokemon");
         while ($row = $result->fetch_assoc()) {
             echo'<tr>
-            <td>' . $row['nomPokemon'] . '</td>
+            <td><a href="details.php?id=' . $row['idPokemon'] . '">' . $row['nomPokemon'] .  '</a> </td>
             <td>' . $row['idPokemon'] . '</td>
-            <td>
-            <a href="details.php?id=' . $row['idPokemon'] . '"><img src="' . $row['urlPhoto'] . '" alt="Pokeimage"></a></td>
+            <td><img src="' . $row['urlPhoto'] . '" alt="Pokeimage"></td>
             <td>' . $row['type1']  . '<br>' . $row['type2'] . '</td>
             </tr>';
+            
         }
         ?>
 

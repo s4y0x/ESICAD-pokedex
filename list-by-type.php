@@ -40,9 +40,9 @@ while ($type = $typeQuery->fetch_assoc()) {
         while ($row = $result->fetch_assoc()) {
             echo '
                 <tr>
-                    <td>' . ($row['nomPokemon']) . '</td>
+                    <td><a href="details.php?id=' . $row['idPokemon'] . '">' . $row['nomPokemon'] . '</a> </td>
                     <td>' . ($row['idPokemon']) . '</td>
-                    <td><img src="' . ($row['urlPhoto']) . '" alt="' . ($row['nomPokemon']) . '" height="50"></td>
+                    <td><img src="' . $row['urlPhoto'] . '" alt="Pokeimage"></td>
                 </tr>';
         }
         

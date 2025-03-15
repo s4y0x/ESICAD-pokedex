@@ -25,5 +25,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Prénom: <input type="text" name="prenom" required><br>
     Login: <input type="text" name="login" required><br>
     Mot de passe: <input type="password" name="password" required><br>
-    <button type="submit">S'inscrire</button>
+    <button type="submit" >S'inscrire</button>
 </form>

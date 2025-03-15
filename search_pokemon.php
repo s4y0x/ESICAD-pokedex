@@ -21,12 +21,12 @@ require_once("head.php");
         WHERE nomPokemon LIKE '%" .$_GET["q"]. "%' ";
         $res = $databaseConnection->query($sql)->fetch_all(MYSQLI_ASSOC);
         foreach ($res as $row){
-            echo'<tr>
-            <td>' . $row['nomPokemon'] . '</td>
+            echo
+            '<tr>
+            <td><a href="details.php?id=' . $row['idPokemon'] . '">' . $row['nomPokemon'] . '</a> </td>
             <td>' . $row['idPokemon'] . '</td>
-            <td> <img src="' . $row['urlPhoto'] . '"alt="Pokeimage">', '</td>
-            <td>' . $row['type1'] . '<br>' . $row['type2'] . '</td>
-            
+            <td><img src="' . $row['urlPhoto'] . '" alt="Pokeimage"></td>
+            <td>' . $row['type1']  . '<br>' . $row['type2'] . '</td>
             </tr>';
     }   
     ?>

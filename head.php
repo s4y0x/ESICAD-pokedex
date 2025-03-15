@@ -33,8 +33,8 @@ $userFirstName = $loggedIn ? $_SESSION['user_firstname'] : '';
         </form>
         <?php if ($loggedIn): ?>
             <div class="user-info">
-                 <?php echo htmlspecialchars($userFirstName . ' ' . $userName); ?>
-                <a href="logout.php" style="color: white;">Déconnexion</a>
+                 <?php echo ($userFirstName . ' ' . $userName); ?>
+                / <a href="logout.php" style="color: white;">Déconnexion</a>
             </div>
         <?php else: ?>
             <a href="login.php" style="color: white;">Connexion</a>

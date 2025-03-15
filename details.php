@@ -4,7 +4,6 @@ require_once("database-connection.php");
 
 $pokemonId = $_GET['id'];
 
-// Requête pour récupérer les détails du Pokémon avec ses stats
 $sql = "SELECT p.*, t1.nomType AS type1, t2.nomType AS type2 
         FROM pokemon p
         LEFT JOIN type_pokemon AS t1 ON p.idType1 = t1.idType
@@ -22,8 +21,8 @@ if ($result && $result->num_rows > 0) {
                 <tr>
                     <th>Nom</th>
                     <th>Numéro</th>
-                    <th>Type(s)</th>
                     <th>Image</th>
+                    <th>Type(s)</th>
                     <th>PV</th>
                     <th>Attaque</th>
                     <th>Défense</th>
@@ -35,8 +34,8 @@ if ($result && $result->num_rows > 0) {
                 <tr>
                     <td>' . $pokemon['nomPokemon'] . '</td>
                     <td>' . $pokemon['idPokemon'] . '</td>
-                    <td>' . $pokemon['type1'] . ($pokemon['type2'] ? ' <br>' . $pokemon['type2'] : '') . '</td>
                     <td><img src="' . $pokemon['urlPhoto'] . '" alt="' . $pokemon['nomPokemon'] . '" height="100"></td>
+                    <td>' . $pokemon['type1'] . ($pokemon['type2'] ? ' <br>' . $pokemon['type2'] : '') . '</td>
                     <td>' . $pokemon['PV'] . '</td>
                     <td>' . $pokemon['PtsAttaque'] . '</td>
                     <td>' . $pokemon['PtsDefense'] . '</td>
